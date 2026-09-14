@@ -491,6 +491,54 @@
       font-size: 0.68rem;
       color: var(--text-soft);
     }
+    .project-media {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--panel-pastel);
+      border: 1px dashed var(--panel-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+    .project-media img,
+    .project-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .project-media.placeholder {
+      color: var(--text-soft);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    .project-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+    .project-links .gh-link {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent-teal);
+      border: 1px solid var(--panel-border);
+      padding: 5px 14px;
+      border-radius: 30px;
+      transition: all 0.2s;
+    }
+    .project-links .gh-link:hover {
+      border-color: var(--accent-rose);
+      color: var(--accent-rose);
+      text-decoration: none;
+    }
 
     /* timeline */
     .tl-item {
@@ -843,57 +891,102 @@
       <h2>Projects</h2>
 
       <div class="project">
+        <div class="project-media">
+        <img src="Screenshot 2026-09-11 at 2.09.09 AM.png" alt="Face Recognition Project"></div>
+
         <div class="row1">
           <h3>Face Recognition Attendance System</h3>
           <span class="tag">computer vision</span>
         </div>
-        <p>A face-recognition pipeline that automates attendance tracking. Built on a public dataset, split into training and testing sets, evaluated, and written up as a published research paper.</p>
-        <span class="meta">outcome: <a href="IEEE_Conference_Template.pdf" target="_blank">published — IEEE</a></span>
+        <p>A computer vision project that improves facial recognition accuracy through image processing and deep learning. The pipeline processes 1,005 grayscale facial images from 10 individuals, applies multiple enhancement techniques including median filtering, histogram equalization, contrast stretching, high-boost filtering, and gamma correction, then trains a CNN for facial classification. The model was evaluated using accuracy, confusion matrices, classification reports, and training curves, achieving 97.1% accuracy after enhancement compared to 85% before enhancement. The work was also developed into a research paper published in the IEEE ICCA 2025 proceedings.
+         </p>
+        <div class="project-links">
+          <a class="gh-link" href="https://github.com/rowidamorsy9-sudo/face-recognition-image-enhancement" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <span class="meta">outcome: <a href="IEEE_Conference_Template.pdf" target="_blank">published — IEEE</a></span>
+        </div>
       </div>
 
       <div class="project">
+        <div class="project-media">
+        <img src="IMG_2474.jpg" alt="Sign Language to Text"></div>
         <div class="row1">
           <h3>Sign Language to Text</h3>
           <span class="tag">computer vision · ml</span>
         </div>
-        <p>A system that converts sign language into text. Trained and compared five different machine learning models on a public dataset to find the strongest performer.</p>
-        <span class="meta">outcome: 5 models benchmarked</span>
+        <p>A computer vision and machine learning system for recognizing sign language gestures and converting them into text. The project processes a public sign language dataset, prepares the data for model training, and trains and evaluates five different machine learning models. Their performance is compared using evaluation metrics to identify the most accurate and reliable approach for sign language recognition.</p>
+        <div class="project-links">
+          <a class="gh-link" href="https://github.com/rowidamorsy9-sudo/asl-alphabet-recognition" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <span class="meta">outcome: 5 models benchmarked</span>
+        </div>
       </div>
 
+     
       <div class="project">
+        <div class="project-media placeholder">
+          🚧 Coming Soon<br>
+          Project currently being prepared
+        </div>
+
         <div class="row1">
           <h3>CS Research Paper Web Scraper</h3>
           <span class="tag">data engineering</span>
         </div>
-        <p>A scraper inspired by arXiv that collects computer science research papers and organises them by category, structured for later analysis.</p>
-        <span class="meta">outcome: ~1,000 papers collected</span>
+
+        <p>
+          A web scraping project inspired by arXiv that collects computer science
+          research papers, extracts structured information, and organizes the data
+          by category for further analysis.
+        </p>
+
+        <div class="project-links">
+          <span class="gh-link">Coming Soon ↗</span>
+          <span class="meta">outcome: ~1,000 papers collected</span>
+        </div>
       </div>
 
+
+
       <div class="project">
+        <div class="project-media">
+        <img src="PHOTO-2026-05-20-22-38-49 2.jpg" alt="MERN Stack Web Application"></div>
         <div class="row1">
           <h3>MERN Stack Web Application</h3>
           <span class="tag">full-stack</span>
         </div>
-        <p>A full-stack application built with MongoDB, Express, React, and Node, with user authentication and basic security features integrated end to end.</p>
-        <span class="meta">stack: MongoDB · Express · React · Node</span>
+        <p>A full-stack MERN web application featuring user authentication, protected routes, RESTful APIs, and MongoDB data management. The project integrates frontend, backend, database, and basic security practices into a complete end-to-end application.
+         </p>
+        <div class="project-links">
+          <a class="gh-link" href="https://github.com/rowidamorsy9-sudo/Pet-Adoption-Care-Platform" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <span class="meta">stack: MongoDB · Express · React · Node</span>
+        </div>
       </div>
 
       <div class="project">
+        <div class="project-media">
+        <img src="Screenshot 2026-09-14 at 5.24.28 PM.png" alt="C# Game Development"></div>
         <div class="row1">
           <h3>C# Game Development</h3>
           <span class="tag">systems</span>
         </div>
-        <p>Two interactive games built in C#, applying object-oriented programming and core game-development concepts.</p>
-        <span class="meta">language: C#</span>
+        <p>Two interactive games developed in C# using object-oriented programming and core game-development concepts, including game logic, collision detection, event handling, player interaction, and graphical components.</p>
+        <div class="project-links">
+          <a class="gh-link" href="https://github.com/rowidamorsy9-sudo/Graphics-Train-Track-Game" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <span class="meta">language: C#</span>
+        </div>
       </div>
 
-      <div class="project">
+      <div class="project">Screenshot 
+       <div class="project-media">
+        <img src="Screenshot 2026-09-14 at 6.58.25 PM.png" alt="Employee Management System"></div>
         <div class="row1">
-          <h3>Huffman Coding</h3>
-          <span class="tag">algorithms</span>
+          <h3>Employee Management System</h3>
+          <span class="tag">Python</span>
         </div>
-        <p>An implementation of the Huffman coding algorithm for lossless data compression, applying core data structures and algorithmic thinking.</p>
-        <span class="meta">language: C++</span>
+        <p>A desktop-based employee management system built with Python and Tkinter. The application manages full-time, part-time, and freelance employees, providing employee CRUD operations, salary calculation, attendance tracking, filtering, sorting, statistics, and JSON-based data storage.</p>
+        <div class="project-links">
+          <a class="gh-link" href="https://github.com/rowidamorsy9-sudo/employee-management-system" target="_blank" rel="noopener">View on GitHub ↗</a>
+          <span class="meta">Python · Tkinter · OOP</span>
+        </div>
       </div>
 
       <p style="margin-top:28px; font-size:0.92rem;">More code and in-progress work lives on <a href="https://github.com/rowidamorsy9-sudo" target="_blank" rel="noopener">github.com/rowidamorsy</a>.</p>
@@ -1029,7 +1122,7 @@
       <div class="contact-grid">
         <a class="btn primary" href="mailto:rowidamorsy9@gmail.com">rowidamorsy9@gmail.com</a>
         <a class="btn outline-teal" href="tel:+201094623280">+20 109 462 3280</a>
-        <a class="btn" href="https://linkedin.com/rowidamorsy" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/rowida-morsy/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="btn" href="https://github.com/rowidamorsy9-sudo" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
